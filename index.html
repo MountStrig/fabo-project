@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>FABO</title>
+</head>
+<body>
+    <div class="main-page">
+        <!-- Side bar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <img src="fabo.logo.png" alt="Your Logo">
+            </div>
+            <div class="sbbuttons">
+                <button id="button1" onclick="toggleSubMenu('submenu1')">Client<br>Management</button>
+                <ul class="submenu" id="submenu1">
+                    <li onclick="openPopup('addClientsPopup')">Add Client</li>
+                    <li><a href="clientslist.html">Manage Clients</a></li>
+                </ul>
+    
+                <button id="button2" onclick="toggleSubMenu('submenu2')">Client User <br>Management</button>
+                <ul class="submenu" id="submenu2">
+                    <li onclick="openPopup('addUserPopup')">Add User</li>
+                    <li><a href="userslist.html">Manage Users</a> </li>
+                </ul>
+    
+                <button id="button3" onclick="toggleSubMenu('submenu3')">Admin User <br>Management</button>
+                <ul class="submenu" id="submenu3">
+                    <li onclick="openPopup('addAdminPopup')">Add Admin</li>
+                    <li><a href="adminslist.html">Manage Admins</a></li>
+                </ul>
+
+            
+                 <button id="button4" onclick="toggleSubMenu('submenu4')">Accounts Admin</button>
+                <ul class="submenu" id="submenu4">
+                    <li><a href="addinvoiceadmin.html">Add Invoice</a></li>
+                    <li><a href="invoiceslistadmin.html">Manage Invoices</a></li>
+                </ul>
+
+                <button id="button5" onclick="toggleSubMenu('submenu5')">Support Admin</button>
+                <ul class="submenu" id="submenu5">
+                    <li><a href="addsupportadmin.html">Add Support Request</a></li>
+                    <li><a href="supportlistadmin.html">View Support Request</a></li>
+                </ul>
+
+                <button id="button6" onclick="toggleSubMenu('submenu6')">Product Admin</button>
+                <ul class="submenu" id="submenu6">
+                    <li><a href="addproductadmin.html">Add Product Request</a></li>
+                    <li><a href="productlist.html">View Product Request</a></li>
+                </ul> 
+
+                <button id="button7" > <a href="creatives.html">Creatives Admin</a></button>
+
+                <button id="button8" onclick="toggleSubMenu('submenu8')">Client Accounts User</button>
+                <ul class="submenu" id="submenu8">
+                    <li><a href="clientinvoiceslist.html">View Invoices</a></li>
+                    
+                    
+                </ul> 
+
+                <button id="button9" onclick="toggleSubMenu('submenu9')">Client Support User</button>
+                <ul class="submenu" id="submenu9">
+                    <li><a href="clientaddsupport.html">Add Support Request</a></li>
+                     <li><a href="clientsupportlist.html">View Support Requests</a></li>
+                    
+                </ul> 
+
+                <button id="button10" onclick="toggleSubMenu('submenu10')">Client Product User</button>
+                <ul class="submenu" id="submenu10">
+                    <li><a href="clientaddproduct.html">Add Product Request</a></li>
+                     <li><a href="clientproductlist.html">View Product Requests</a></li>
+                    
+                </ul> 
+                
+            </div>
+        </div>
+
+
+        <!-- Dashboard Home Page -->
+
+        <div class="section">
+            <div class="greeting">
+                <div class="faboimg">
+                    <img src="Untitled_design__5_-removebg-preview.png" alt="">
+                </div>
+                <div class="text">
+                    <h3>For Fabulous Homes & Fabrics </h3>
+                </div>              
+            </div>
+        </div>
+
+        <div class="popup" id="addClientsPopup"> 
+            <div class="card">
+                <div class="wrapper">
+                    <div class="title">Add Client</div>
+                    <form action="#">
+                        <div class="user-detail">
+                            <div class="input-box">
+                                <span class="details">Store Name</span>
+                                <input type="text" placeholder="Enter Store Name" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Store Code</span>
+                                <input type="text" placeholder="Enter Store Code" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Owner Name</span>
+                                <input type="text" placeholder="Enter Owner Name" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">E-Mail</span>
+                                <input type="email" placeholder="Enter E-Mail" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Owner Phone</span>
+                                <input type="tel" placeholder="Enter Owner Phone Number" oninput="validateNumericInput(this)" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Store Phone</span>
+                                <input type="tel" placeholder="Enter Store Phone Number" oninput="validateNumericInput(this)" >
+                            </div> 
+
+                            <div class="input-box">
+                                <span class="details">GST Number</span>
+                                <input type="tel" placeholder="Enter GST Number">
+                            </div>
+
+                            <div class="input-box">
+                                <label for="details" class="details">Full Address</label>
+                                 <textarea id="fullAddress" name="fullAddress" placeholder="Enter Full Address" required></textarea>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">City</span>
+                                <input type="text" placeholder="Enter City" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Pin Code</span>
+                                <input type="text" placeholder="Enter Pincode" required >
+                            </div>
+                            <div class="input-box">
+                                <span class="details">State</span>
+                                <input type="text" placeholder="Enter State" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">GMB Profile Link</span>
+                                <input type="text" placeholder="Enter GMB Profile Link">
+                            </div>
+
+                        </div>
+
+                        <div class="button">
+                            <input type="submit" value="Submit">
+                            <div class="close-button">
+                                <button onclick="closePopup()">Close</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="addUserPopup">          
+            <div class="card">
+                <div class="wrapper">
+                    <div class="title">Add User</div>
+                    <form action="#">
+                        <div class="user-detail">
+                            <div class="input-box">
+                                <span class="details">Store Code</span>
+                                <input type="text" placeholder="Enter Store Code" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Store Name</span>
+                                <input type="text" placeholder="Enter Store Name" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">User Name</span>
+                                <input type="text" placeholder="Enter User Name" pattern="[a-zA-Z0-9.]*" title="Only alphabets, numbers, and dots are allowed" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Display Name</span>
+                                <input type="text" placeholder="Enter Display Name" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">E-Mail</span>
+                                <input type="email" placeholder="Enter E-Mail" required >
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Phone Number</span>
+                                <input type="tel" placeholder="Enter Phone Number" oninput="validateNumericInput(this)" required>
+                            </div>
+
+                            <!-- Repeat similar input-box elements for other user details -->
+
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <div class="checkbox-wrapper">
+                              <label class="checkbox-label" for="checkbox1">
+                                <div class="custom-checkbox">
+                                  <input type="checkbox" id="checkbox1">
+                                  <div class="checkmark"></div>
+                                </div>
+                                Accounts
+                              </label>
+                            </div>
+                        
+                            <div class="checkbox-wrapper">
+                              <label class="checkbox-label" for="checkbox2">
+                                <div class="custom-checkbox">
+                                  <input type="checkbox" id="checkbox2">
+                                  <div class="checkmark"></div>
+                                </div>
+                                Support
+                              </label>
+                            </div>
+                        
+                            <div class="checkbox-wrapper">
+                              <label class="checkbox-label" for="checkbox3">
+                                <div class="custom-checkbox">
+                                  <input type="checkbox" id="checkbox3">
+                                  <div class="checkmark"></div>
+                                </div>
+                                Products
+                              </label>
+                            </div>
+                        
+                            <div class="checkbox-wrapper">
+                              <label class="checkbox-label" for="checkbox4">
+                                <div class="custom-checkbox">
+                                  <input type="checkbox" id="checkbox4">
+                                  <div class="checkmark"></div>
+                                </div>
+                                Creatives
+                              </label>
+                            </div>
+                          </div>
+                          <div class="button">
+                            <input type="submit" value="Submit">
+                            <div class="close-button">
+                                <button onclick="closePopup()">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="addAdminPopup">
+            
+            <div class="card">
+                <div class="wrapper">
+                    <div class="title">Add Admin</div>
+                    <form action="#">
+                        <div class="user-detail">
+                            <div class="input-box">
+                                <span class="details"> Display Name</span>
+                                <input type="text" placeholder="Enter Display Name" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">User Name</span>
+                                <input type="text" placeholder="Enter User Name" pattern="[a-zA-Z0-9.]*" title="Only alphabets, numbers, and dots are allowed" required>
+                            </div>
+        
+                            <div class="input-box">
+                                <span class="details">E-Mail</span>
+                                <input type="text" placeholder="Enter E-Mail" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Phone Number</span>
+                                <input type="tel" placeholder="Enter Phone Number" oninput="validateNumericInput(this)" required>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <div class="checkbox-wrapper">
+                                    <label class="checkbox-label" for="adminCheckbox1">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="adminCheckbox1">
+                                            <div class="checkmark"></div>
+                                        </div>
+                                        Accounts
+                                    </label>
+                                </div>
+        
+                                <div class="checkbox-wrapper">
+                                    <label class="checkbox-label" for="adminCheckbox2">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="adminCheckbox2">
+                                            <div class="checkmark"></div>
+                                        </div>
+                                        Support
+                                    </label>
+                                </div>
+         
+                                <div class="checkbox-wrapper">
+                                    <label class="checkbox-label" for="adminCheckbox3">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="adminCheckbox3">
+                                            <div class="checkmark"></div>
+                                        </div>
+                                        Products
+                                    </label>
+                                </div>
+
+                                <div class="checkbox-wrapper">
+                                    <label class="checkbox-label" for="adminCheckbox4">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" id="adminCheckbox4">
+                                            <div class="checkmark"></div>
+                                        </div>
+                                        Creatives
+                                    </label>
+                                </div>
+        
+                              
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Submit">
+                            <div class="close-button">
+                                <button onclick="closePopup()">Close</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+
+</body>
+</html>

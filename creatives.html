@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="creatives.css">
+    <link rel="stylesheet" href="fabo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <title>FABO</title>
+</head>
+<body>
+    <div class="main-page">
+        <!-- Side bar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <img src="fabo.logo.png" alt="Your Logo">
+            </div>
+            <div class="sbbuttons">
+
+                <div class="dropdown" id="dropdown1"></div>
+                <select id="dropdown" required>
+                    <option value="Laundry">Laundry</option>
+                    <option value="Drycleaning">Drycleaning</option>
+                    <option value="Footwear Cleaning">Footwear Cleaning</option>
+                    <option value="Designerwear Cleaning">Designerwear Cleaning</option>
+                </select>
+            </div>
+
+            <!-- Add the dropdown content -->
+            <div class="dropdown" id="dropdown2">
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+
+        <div class="section">
+            <div class="cards">
+                <div class="container">
+                    <div class="card" id="card1">
+                        <h2>Upload image</h2>
+                        <label for="fileInput1" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput1" style="display: none;" onchange="handleImageUpload(event, 1)">
+                        <div class="uploaded-image" id="uploadedImage1"></div>
+                        <button class="delete-button" id="deleteButton1" onclick="handleDeleteImage(1)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton1" onclick="handlePreviewImage(1)" style="display: none;">Preview</button>
+                    </div>
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="previewImage">
+                    </div>   
+
+                    <div class="card" id="card2">
+                        <h2>Upload image</h2>
+                        <label for="fileInput2" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput2" style="display: none;" onchange="handleImageUpload(event, 2)">
+                        <div class="uploaded-image" id="uploadedImage2"></div>
+                        <button class="delete-button" id="deleteButton2" onclick="handleDeleteImage(2)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton2" onclick="handlePreviewImage(2)" style="display: none;">Preview</button>
+                    </div>
+
+
+                    <div class="card" id="card3">
+                        <h2>Upload image</h2>
+                        <label for="fileInput3" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput3" style="display: none;" onchange="handleImageUpload(event, 3)">
+                        <div class="uploaded-image" id="uploadedImage3"></div>
+                        <button class="delete-button" id="deleteButton3" onclick="handleDeleteImage(3)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton3" onclick="handlePreviewImage(3)" style="display: none;">Preview</button>
+                    </div>
+                    <div class="card" id="card4">
+                        <h2>Upload image</h2>
+                        <label for="fileInput4" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput4" style="display: none;" onchange="handleImageUpload(event, 4)">
+                        <div class="uploaded-image" id="uploadedImage4"></div>
+                        <button class="delete-button" id="deleteButton4" onclick="handleDeleteImage(4)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton4" onclick="handlePreviewImage(4)" style="display: none;">Preview</button>
+                    </div>
+                    <div class="card" id="card5">
+                        <h2>Upload image</h2>
+                        <label for="fileInput5" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput5" style="display: none;" onchange="handleImageUpload(event, 5)">
+                        <div class="uploaded-image" id="uploadedImage5"></div>
+                        <button class="delete-button" id="deleteButton5" onclick="handleDeleteImage(5)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton5" onclick="handlePreviewImage(5)" style="display: none;">Preview</button>
+                    </div>
+                    <div class="card" id="card6">
+                        <h2>Upload image</h2>
+                        <label for="fileInput6" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput6" style="display: none;" onchange="handleImageUpload(event, 6)">
+                        <div class="uploaded-image" id="uploadedImage6"></div>
+                        <button class="delete-button" id="deleteButton6" onclick="handleDeleteImage(6)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton6" onclick="handlePreviewImage(6)" style="display: none;">Preview</button>
+                    </div>
+                    <div class="card" id="card7">
+                        <h2>Upload image</h2>
+                        <label for="fileInput7" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput7" style="display: none;" onchange="handleImageUpload(event, 7)">
+                        <div class="uploaded-image" id="uploadedImage7"></div>
+                        <button class="delete-button" id="deleteButton7" onclick="handleDeleteImage(7)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton7" onclick="handlePreviewImage(7)" style="display: none;">Preview</button>
+                    </div>
+                    <div class="card" id="card8">
+                        <h2>Upload image</h2>
+                        <label for="fileInput8" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput8" style="display: none;" onchange="handleImageUpload(event, 8)">
+                        <div class="uploaded-image" id="uploadedImage8"></div>
+                        <button class="delete-button" id="deleteButton8" onclick="handleDeleteImage(8)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton8" onclick="handlePreviewImage(8)" style="display: none;">Preview</button>
+                    </div>
+                    <div class="card" id="card9">
+                        <h2>Upload image</h2>
+                        <label for="fileInput9" class="upload-button">Upload</label>
+                        <input type="file" class="image-upload" accept="image/*" id="fileInput9" style="display: none;" onchange="handleImageUpload(event, 9)">
+                        <div class="uploaded-image" id="uploadedImage9"></div>
+                        <button class="delete-button" id="deleteButton9" onclick="handleDeleteImage(9)" style="display: none;">Delete</button>
+                        <button class="preview-button" id="previewButton9" onclick="handlePreviewImage(9)" style="display: none;">Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+                   
+                    
+     
+
+
+  <script>
+    // Function to handle image upload for a specific card
+// Function to handle image upload for a specific card
+function handleImageUpload(event, cardNumber) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    const uploadedImage = document.querySelector(`#uploadedImage${cardNumber}`);
+    const deleteButton = document.querySelector(`#deleteButton${cardNumber}`);
+    const previewButton = document.querySelector(`#previewButton${cardNumber}`);
+    const uploadLabel = document.querySelector(`#card${cardNumber} .upload-button`); // Modified selector here
+    const heading = document.querySelector(`#card${cardNumber} h2`); // Modified selector here
+
+    reader.onload = function(e) {
+        uploadedImage.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image">`;
+        deleteButton.style.display = 'block';
+        previewButton.style.display = 'block';
+        uploadLabel.style.display = 'none';
+        heading.style.display = 'none';
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+}
+
+// Function to handle deleting an image for a specific card
+function handleDeleteImage(cardNumber) {
+    const uploadedImage = document.querySelector(`#uploadedImage${cardNumber}`);
+    const deleteButton = document.querySelector(`#deleteButton${cardNumber}`);
+    const input = document.querySelector(`#fileInput${cardNumber}`);
+    const previewButton = document.querySelector(`#previewButton${cardNumber}`);
+    const uploadLabel = document.querySelector(`.card:nth-child(${cardNumber}) .upload-button`);
+    const heading = document.querySelector(`.card:nth-child(${cardNumber}) h2`);
+
+    uploadedImage.innerHTML = '';
+    deleteButton.style.display = 'none';
+    previewButton.style.display = 'none';
+    input.value = '';
+    uploadLabel.style.display = 'block';
+    heading.style.display = 'block';
+}
+
+// Function to handle previewing the image in the modal for a specific card
+function handlePreviewImage(cardNumber) {
+    const uploadedImage = document.querySelector(`#uploadedImage${cardNumber} img`);
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("previewImage");
+
+    modal.style.display = "block";
+    modalImg.src = uploadedImage.src;
+
+    const span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}
+
+  </script>
+</body>
+</html>

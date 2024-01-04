@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clientsedit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-page">
+        <!-- Side bar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <img src="fabo.logo.png" alt="Your Logo">
+            </div>
+            <div class="sbbuttons">
+                <button id="button1" onclick="toggleSubMenu('submenu1')">Client<br>Management</button>
+                <ul class="submenu" id="submenu1">
+                    <li onclick="openPopup('addClientsPopup')">Add Clients</li>
+                    <li > Manage Clients</li>
+                </ul>
+    
+                <button id="button2" onclick="toggleSubMenu('submenu2')">Client User <br>Management</button>
+                <ul class="submenu" id="submenu2">
+                    <li onclick="openPopup('addUserPopup')">Add User</li>
+                    <li > Manage Users</li>
+                </ul>
+    
+                <button id="button3" onclick="toggleSubMenu('submenu3')">Admin User <br>Management</button>
+                <ul class="submenu" id="submenu3">
+                    <li onclick="openPopup('addAdminPopup')">Add Admin</li>
+                    <li >ManageAdmins</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrapper">
+                <div class="title">Edit Clients</div>
+                <form action="#">
+                    <div class="user-detail">
+                        <div class="input-box">
+                            <span class="details">Store Name</span>
+                            <input type="text" placeholder="Enter Store Name" required >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">Store Code</span>
+                            <input type="text" placeholder="Enter Store Code" required >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">E-Mail</span>
+                            <input type="email" placeholder="Enter E-Mail" required >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">Owner Phone</span>
+                            <input type="tel" placeholder="Enter Owner Phone" required >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">Store Phone</span>
+                            <input type="tel" placeholder="Enter Store Phone" >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">State</span>
+                            <input type="text" placeholder="Enter State" required >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">City</span>
+                            <input type="text" placeholder="Enter City" required >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details"> Full Adress</span>
+                            <input type="text" placeholder="Enter Full Adress" required >
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">GMB Profile Link</span>
+                            <input type="text" placeholder="Enter GMB Profile Link">
+                        </div>
+
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Update">
+                        <li><a href="clientslist.html">Close</a></li>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+        
